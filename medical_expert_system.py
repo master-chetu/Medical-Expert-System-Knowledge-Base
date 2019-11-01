@@ -27,7 +27,7 @@ def preprocess():
 		disease_s_data = disease_s_file.read()
 		d_treatment_map[disease] = disease_s_data
 		disease_s_file.close()
-	
+
 
 def identify_disease(*arguments):
 	symptom_list = []
@@ -90,23 +90,23 @@ class Greetings(KnowledgeEngine):
 	@Rule(Fact(action='find_disease'), NOT(Fact(fatigue=W())),salience = 1)
 	def symptom_5(self):
 		self.declare(Fact(fatigue=input("fatigue: ")))
-	 
+
 	@Rule(Fact(action='find_disease'), NOT(Fact(sunken_eyes=W())),salience = 1)
 	def symptom_6(self):
 		self.declare(Fact(sunken_eyes=input("sunken eyes: ")))
-	
+
 	@Rule(Fact(action='find_disease'), NOT(Fact(low_body_temp=W())),salience = 1)
 	def symptom_7(self):
 		self.declare(Fact(low_body_temp=input("low body temperature: ")))
-	
+
 	@Rule(Fact(action='find_disease'), NOT(Fact(restlessness=W())),salience = 1)
 	def symptom_8(self):
 		self.declare(Fact(restlessness=input("restlessness: ")))
-	
+
 	@Rule(Fact(action='find_disease'), NOT(Fact(sore_throat=W())),salience = 1)
 	def symptom_9(self):
 		self.declare(Fact(sore_throat=input("sore throat: ")))
-	
+
 	@Rule(Fact(action='find_disease'), NOT(Fact(fever=W())),salience = 1)
 	def symptom_10(self):
 		self.declare(Fact(fever=input("fever: ")))
